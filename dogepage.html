@@ -1,0 +1,299 @@
+<html>
+
+<head>
+
+	<title> The Dog House </title>
+
+</head>
+<style>
+
+<!-- These control the format for most of the text.-->
+
+h4 {
+	font-family: verdana;
+	color:white;
+}
+
+
+h3 {
+	font-family: verdana;
+	color: white;
+}
+
+h2 {
+	font-family: verdana;
+	color:white;
+}
+
+ol {
+	font-family: verdana;
+	color:white;
+}
+
+p  {
+	font-family: verdana;
+	color:white;
+}
+
+i {
+font-family: verdana;
+color:white;
+}
+
+body { 
+	background-image: url("folk.png");
+
+}
+ <!-- This is for the slideshow of photos.-->
+.mySlides {display:none;}
+<!-- End -->
+</style>
+
+<style>
+div.tab 
+ {
+	float: left;
+	background-color: #191616;
+	color: white;
+	margin: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+	align: center;
+	border-style: solid;
+	border-width: 2px;
+ }
+ 
+ div.photo
+ {
+	padding-left: 10px;
+	padding-right: 20px;
+ }
+ 
+ 
+ </style>
+ 
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+
+
+ 
+ 
+ <script>
+	function ToggleDiv(divtoturnon)
+	{
+		document.getElementById('display1').style.display = "none";
+		document.getElementById('display2').style.display = "none";
+		document.getElementById('display3').style.display = "none";
+		document.getElementById('display4').style.display = "none";
+		
+		document.getElementById(divtoturnon).style.display = "block";
+	}
+	
+	
+ </script>
+ 
+ 
+ 
+ 
+
+<script>
+<!-- i have no idea how i got this to work but this changes the color of the tabs when u hover over-->
+function ChangeOnHover(bg)
+{
+bg.style.color = "blue";
+}
+
+	function ChangeOnNoHover(bg)
+	{
+	bg.style.color = "white";
+	}
+	
+ </script>
+ 
+ <script>
+ <!-- This controls the slideshow of photos-->
+ var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+<!-- End Slideshow -->
+
+ </script>
+<body>
+
+<div class="tab" Id="tab1" onclick="ToggleDiv('display1')">
+	<p onmouseout="ChangeOnNoHover(this)" onmouseover="ChangeOnHover(this)">Home</p>
+</div>
+
+<div class="tab" id="tab2" onclick="ToggleDiv('display2')">
+	<p onmouseout="ChangeOnNoHover(this)" onmouseover="ChangeOnHover(this)">Videos</p>
+</div>
+
+<div class="tab" id="tab3" onclick="ToggleDiv('display3')">
+	<p onmouseout="ChangeOnNoHover(this)" onmouseover="ChangeOnHover(this)">Photos</p>
+</div>
+
+<div class="tab" id="tab4" onclick="ToggleDiv('display4')">
+	<p onmouseout="ChangeOnNoHover(this)" onmouseover="ChangeOnHover(this)">Links</p>
+</div>
+
+<br style="clear:left">
+
+<div class="primaryDisplay">
+
+	<!--This page shows from tab1-->
+	
+		<div id="display1" style="display:block">
+			<div style="background-color:white; height: 55px; width:19%; "><h1><b>The Dog House</b></h1></div>
+			
+<pre><p>Mary, Joshua and Rocky are three dog siblings that live together
+in Lancaster, California. They live a lavish life of sleeping, running, and
+playing.</p></pre>
+
+<h2>Profiles</h2>
+
+	<div class="profiles">
+
+<h3>Mary</h3>
+						<!--On click, the photo takes you to an external link.-->
+<div class="photo"><a href="https://thehappypuppysite.com/german-shepherd-rottweiler-mix/"><img src="mary.jpg" alt="mary's face should be here" width=14% align=left style= padding-left: 5px;></a></div>
+
+<div class="des1">
+	<pre><p>Mary is the gentle giant of the family. Being a Rottweiler mix,  
+she is very hardheaded,stubborn, and big. However, she is full 
+of personality and the most well trained out of the bunch.</p></pre>
+<h4><i>Favorite Toys</i></h4>
+
+		<p><pre>
+			<font face="verdana" color="white">
+Triceratops Plush
+Chili Pepper Plush
+Giant Rope
+			</font>
+		</p></pre>
+	<br></div>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+
+<div class="profiles">
+
+<h3>Joshua</h3>
+
+<pre><p>Joshua, or Josh for short, is the hyperactive baby brother. <a href="https://www.akc.org/dog-breeds/italian-greyhound/"><img src="joshua.jpg" alt="josh's face should be here" width=14% align=left></a>
+He is an Italian greyhound mix, and loves to run! He doesn't listen
+very well, but he's full of love and long legs! (He's super tall.)</p></pre> 
+<h4><i>Favorite Places</i></h4>
+
+<p><pre>
+			<font face="verdana" color="white">
+The Backyard
+The Dog Park
+Mom's Lap
+			</font>
+		</p></pre>
+
+</div>
+
+<br>
+<br>
+<br>
+<br>
+
+
+<div class="profiles">
+
+<h3>Rocky</h3>
+
+<pre><p>Rocky is the grumpy old man of the siblings. He is  <a href="https://www.dogbreedinfo.com/chipin.htm"><img src="rocky.jpg" alt="rocky's face should be here" width=14% align=left></a>
+a Chihuahua-Doberman mix. Very small in stature, Rocky rules
+over the house with an iron fist. In his spare time, he loves
+eating carrots and sleeping under blankets.</p></pre>
+
+<h4><i>Favorite Foods</i></h4>
+<p><pre>
+			<font face="verdana" color="white">
+Carrots
+Peanut Butter
+Your Shoes
+			</font>
+		</p></pre>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+</div>
+		</div>
+		<!-- End of the Homepage.-->
+
+		<!--This page shows from tab2.-->
+	
+		<div id="display2" style="display:none">
+		
+		<h1><font color="white"> Videos </font></h1>
+			<iframe align= "center-left" width="480" height="360" src="https://www.youtube.com/embed/babpYFTrj8o" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+	
+
+	<!--This page shows from tab3-->
+	
+		<div id="display3" style="display:none">
+
+	<h2 class="w3-center">Dog Slideshow</h2>
+
+<div class="w3-content w3-display-container">
+  <img class="mySlides" src="rocky2.jpg" style="width:90%">
+  <img class="mySlides" src="maryj.jpg" style="width:90%">
+  <img class="mySlides" src="maryj2.jpg" style="width:90%">
+  <img class="mySlides" src="maryj3.jpg" style="width:90%">
+
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+	
+		</div>
+		
+<!-- Fourth and Final tab-->
+
+		<div id="display4" style="display:none">
+			<span style="color:white"><h1>Links</h1></span>
+
+<ul>
+	<div style="background-color:white; height: 55px; width: 15%; ">
+		<ul>
+		<li><a href="https://barkshop.com/">Bark Shop</a></li>
+		<li><a href="https://www.chewy.com/b/dog-288">Chewy Dog Supplies</a></li>
+		</ul>
+	</div>
+<ul>
+	
+		</div>
+		
+    </body>
+
+
+
+
+</html>
+
+<!-- You're finished. You can finally go back to grinding on maplestory 2.-->
